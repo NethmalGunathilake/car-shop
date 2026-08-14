@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin — Car Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">VELOCE<span>MOTORS</span></a>
+        <div class="nav-links">
+            <a href="index.html#browse">Browse</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html" id="cart-link" style="display:none;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html" id="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <div class="admin-wrap">
+        <h2>Admin Panel</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="cars-tab">Manage Cars</button>
+            <button class="tab-btn" data-tab="orders-tab">Orders</button>
+            <button class="tab-btn" data-tab="accessories-tab">Manage Accessories</button>
+        </div>
+
+        <div id="cars-tab">
+            <button id="new-car-btn">+ Add New Car</button>
+
+            <form id="car-form" style="display:none;">
+                <input type="hidden" id="car-id">
+                <div class="form-group"><label>Make</label><input id="f-make" required></div>
+                <div class="form-group"><label>Model</label><input id="f-model" required></div>
+                <div class="form-group"><label>Year</label><input id="f-year" type="number" required></div>
+                <div class="form-group"><label>Price</label><input id="f-price" type="number" step="0.01" required></div>
+                <div class="form-group"><label>Mileage</label><input id="f-mileage" type="number"></div>
+                <div class="form-group"><label>Stock</label><input id="f-stock" type="number"></div>
+                <div class="form-group"><label>Image URL</label><input id="f-image"></div>
+                <div class="form-group"><label>Description</label><textarea id="f-description"></textarea></div>
+                <button type="submit">Save Car</button>
+                <button type="button" id="cancel-form-btn">Cancel</button>
+                <p id="car-form-error"></p>
+            </form>
+
+            <table>
+                <thead><tr><th>Car</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+                <tbody id="cars-table-body"><tr><td colspan="4">Loading...</td></tr></tbody>
+            </table>
+        </div>
+
+        <div id="orders-tab" style="display:none;">
+            <table>
+                <thead><tr><th>Order #</th><th>Customer</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+                <tbody id="orders-table-body"><tr><td colspan="5">Loading...</td></tr></tbody>
+            </table>
+        </div>
+
+        <div id="accessories-tab" style="display:none;">
+    <button id="new-accessory-btn">+ Add New Accessory</button>
+
+    <form id="accessory-form" style="display:none;">
+        <input type="hidden" id="a-id">
+        <div class="form-group"><label>Name</label><input id="a-name" required></div>
+        <div class="form-group"><label>Category</label><input id="a-category" required></div>
+        <div class="form-group"><label>Price</label><input id="a-price" type="number" step="0.01" required></div>
+        <div class="form-group"><label>Stock</label><input id="a-stock" type="number"></div>
+        <div class="form-group"><label>Image URL</label><input id="a-image"></div>
+        <div class="form-group"><label>Description</label><textarea id="a-description"></textarea></div>
+        <button type="submit">Save Accessory</button>
+        <button type="button" id="cancel-accessory-form-btn">Cancel</button>
+        <p id="accessory-form-error"></p>
+    </form>
+
+    <table>
+        <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+        <tbody id="accessories-table-body"><tr><td colspan="5">Loading...</td></tr></tbody>
+    </table>
+    </div>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

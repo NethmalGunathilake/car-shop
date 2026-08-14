@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login — Car Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">VELOCE<span>MOTORS</span></a>
+        <div class="nav-links">
+            <a href="index.html#browse">Browse</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html" id="cart-link" style="display:none;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html" id="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <div class="form-wrap">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="form-error"></p>
+        </form>
+        <p>No account? <a href="register.html">Register</a></p>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

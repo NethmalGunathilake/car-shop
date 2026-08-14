@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessories — Veloce Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="brand">VELOCE<span>MOTORS</span></a>
+        <div class="nav-links">
+            <a href="index.html#browse">Browse</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html" id="cart-link" style="display:none;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html" id="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1 class="reveal">Parts &amp; Accessories</h1>
+        <p class="reveal">Upgrade your ride with genuine, dealer-recommended accessories.</p>
+    </section>
+
+    <div class="filters reveal">
+        <input type="text" id="search-input" placeholder="Search accessories...">
+        <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="Wheels">Wheels</option>
+            <option value="Interior">Interior</option>
+            <option value="Audio">Audio</option>
+            <option value="Exterior">Exterior</option>
+        </select>
+        <button id="filter-btn">Filter</button>
+    </div>
+
+    <div id="car-grid">
+        <p>Loading accessories...</p>
+    </div>
+
+    <footer class="site-footer-full">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Veloce Motors. Built as a learning project.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script src="js/accessories.js"></script>
+</body>
+</html>

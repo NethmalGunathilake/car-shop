@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="brand">VELOCE<span>MOTORS</span></a>
+        <div class="nav-links">
+            <a href="index.html#browse">Browse</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="cart.html" id="cart-link" style="display:none;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html" id="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow reveal">Est. 2026 &mdash; Trusted Dealership</p>
+            <h1 class="hero-title reveal">Drive Something<br>Extraordinary</h1>
+            <p class="hero-sub reveal">Hand-picked cars, honest prices, zero pressure. Find your next ride today.</p>
+            <a href="#browse" class="hero-btn reveal">Browse Inventory</a>
+        </div>
+    </section>
+
+    <section class="stats reveal">
+        <div class="stat"><span class="stat-num" data-target="500">0</span>+<p>Cars Sold</p></div>
+        <div class="stat"><span class="stat-num" data-target="1200">0</span>+<p>Happy Customers</p></div>
+        <div class="stat"><span class="stat-num" data-target="15">0</span><p>Years in Business</p></div>
+        <div class="stat"><span class="stat-num" data-target="98">0</span>%<p>Satisfaction Rate</p></div>
+    </section>
+
+    <section class="features">
+        <div class="feature reveal">
+            <div class="feature-icon">🚗</div>
+            <h3>Wide Selection</h3>
+            <p>From daily drivers to weekend toys, our inventory is curated and constantly refreshed.</p>
+        </div>
+        <div class="feature reveal">
+            <div class="feature-icon">🛡️</div>
+            <h3>Trusted &amp; Verified</h3>
+            <p>Every listing is checked for accuracy. What you see is exactly what you get.</p>
+        </div>
+        <div class="feature reveal">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Checkout</h3>
+            <p>Reserve your car online in minutes. No paperwork headaches, no waiting rooms.</p>
+        </div>
+    </section>
+
+    <section class="about">
+    <div class="about-content reveal">
+        <span class="about-tag">Our Story</span>
+        <h2>Built By Car People, For Car People</h2>
+        <p>Veloce Motors started as a small family lot in 2011 and grew into a trusted name through one simple rule: never sell a car we wouldn't drive ourselves. Every vehicle on our floor is inspected, documented, and priced fairly &mdash; no games, no pressure.</p>
+        <div class="about-points">
+            <div class="about-point">
+                <strong>15+ Years</strong>
+                <span>Of honest dealership experience</span>
+            </div>
+            <div class="about-point">
+                <strong>Zero Hidden Fees</strong>
+                <span>The price you see is the price you pay</span>
+            </div>
+            <div class="about-point">
+                <strong>7-Day Returns</strong>
+                <span>Not happy? Bring it back, no questions</span>
+            </div>
+        </div>
+    </div>
+    <div class="about-image reveal">
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=700" alt="Our dealership">
+    </div>
+</section>
+
+    <section class="testimonials">
+    <h2 class="section-title reveal">What Our Customers Say</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Smoothest car buying experience I've had. No pressure, no hidden fees, just an honest deal on a great car."</p>
+            <div class="testimonial-author">
+                <strong>Marcus Chen</strong>
+                <span>Bought a Tesla Model 3</span>
+            </div>
+        </div>
+        <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>"The online checkout actually worked exactly as expected. Reserved my car in minutes, picked it up the same week."</p>
+            <div class="testimonial-author">
+                <strong>Priya Patel</strong>
+                <span>Bought a Honda Civic</span>
+            </div>
+        </div>
+        <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Fair trade-in value and the team actually knew what they were talking about. Will be back for my next car."</p>
+            <div class="testimonial-author">
+                <strong>Daniel Okafor</strong>
+                <span>Bought a Ford Mustang</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="contact">
+    <div class="contact-info reveal">
+        <span class="about-tag">Get In Touch</span>
+        <h2>Visit The Lot</h2>
+        <p>Have a question about a car, financing, or a trade-in? Reach out &mdash; a real person answers, not a bot.</p>
+        <div class="contact-detail">📍 4210 Motor Ave, Austin, TX</div>
+        <div class="contact-detail">📞 (555) 019-2837</div>
+        <div class="contact-detail">✉️ hello@velocemotors.com</div>
+    </div>
+    <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Thanks! We will be in touch soon.'); this.reset();">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="How can we help?" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <section id="browse" class="browse-section">
+        <h2 class="section-title reveal">Available Now</h2>
+        <div class="filters reveal">
+            <input type="text" id="search-input" placeholder="Search make or model...">
+            <input type="number" id="min-price" placeholder="Min price">
+            <input type="number" id="max-price" placeholder="Max price">
+            <button id="filter-btn">Filter</button>
+        </div>
+        <div id="car-grid">
+            <p>Loading cars...</p>
+        </div>
+    </section>
+
+    <footer class="site-footer-full">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="index.html" class="brand">VELOCE<span>MOTORS</span></a>
+            <p>Honest cars, honest prices. Family-run since 2011.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Browse Cars</a>
+            <a href="#browse">Inventory</a>
+            <a href="cart.html">My Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <span>4210 Motor Ave, Austin, TX</span>
+            <span>(555) 019-2837</span>
+            <span>hello@velocemotors.com</span>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Veloce Motors. Built as a learning project.</p>
+    </div>
+</footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
